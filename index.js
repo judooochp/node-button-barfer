@@ -2,7 +2,6 @@ var http = require('http'),
 	util = require('util'),
 	ws = require("nodejs-websocket"),
 	net = require('net'),
-	rconsole = require('rconsole'),
 	backgrounder = require('backgrounder');
 
 // Configurable stuff
@@ -28,16 +27,6 @@ var clients = [],
 var broadcast = function(data) {
 	for(var c in clients)
 		clients[c].write(data);
-}
-
-// Set up rconsole for logging to syslog, I guess
-var initLogs = function() {
-	console.set(
-		{	'facility' : 'local3',
-			'title' : 'button-barfer',
-			'syslogHashTags' : false
-		}
-	);
 }
 
 // Cause the scraper background process to do a scrape, apply its findings
@@ -243,7 +232,6 @@ var initServer = function(port, address) {
 
 // Set up the order of things
 var main = function() {
-	initLogs();
 	initServer(port, address);
 	initHTTP();
 	initScraper();

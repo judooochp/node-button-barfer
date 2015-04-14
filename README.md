@@ -53,6 +53,6 @@ node index.js
 
 ### Client (Arduino) Installation
 
-As previously mentioned, *button.ino* is the Arduino sketch.  You'll need to make a few changes to this file to suit your configuration.  There are some configuration variables on lines 11-18 that you will need to modify to set your IP address and the address of the server to connect to.
+As previously mentioned, *button.ino* is the Arduino sketch.  You'll need to make a few changes to this file to suit your configuration.  There are some configuration variables on lines 7-15 that you will need to modify to set your IP address and the address of the server to connect to.
 
 The calls to *drawString()* in the *cycleDisplay()* function specify ( "String to display", int x, int y, int fontSize, const int COLOR ). You may need to adjust the locations of stuff and things in order to fit them on your screen, and possibly drop certain items altogether.

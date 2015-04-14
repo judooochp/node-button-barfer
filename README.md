@@ -4,7 +4,9 @@ A node.js server that barfs /r/thebutton data to clients. (For an Arduino projec
 ### Hardware
 
 Arduino UNO R3
+
 Seeed TFT Touch Shield
+
 Seeed Ethernet Shield
 
 ### Software

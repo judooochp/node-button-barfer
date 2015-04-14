@@ -36,7 +36,7 @@ The 'active user' data is not included in the websocket feed, so at a (configura
 
 ### Server Installation
 
-echicken only tested this on Ubuntu 14.04, with rconsole, but this version works on Windows 8.1 without rconsole.
+I have edited this version works on Windows 8.1 without rconsole, under the direction of echicken.
 
 Assuming you've got [node.js](https://nodejs.org/), [npm](https://www.npmjs.com/), and [git](http://git-scm.com/downloads) installed, and assuming judooochp didn't completely mess up, the following should do the trick:
 
@@ -55,4 +55,4 @@ node index.js
 
 As previously mentioned, *button.ino* is the Arduino sketch.  You'll need to make a few changes to this file to suit your configuration.  There are some configuration variables on lines 11-18 that you will need to modify to set your IP address and the address of the server to connect to.
 
-The calls to *drawString()* in the *cycleDisplay()* function specify ( "String to display", x, y, fontSize, COLOR ). You may need to adjust the locations of stuff and things in order to fit them on your screen, and possibly drop certain items altogether.
+The calls to *drawString()* in the *cycleDisplay()* function specify ( "String to display", int x, int y, int fontSize, const int COLOR ). You may need to adjust the locations of stuff and things in order to fit them on your screen, and possibly drop certain items altogether.
